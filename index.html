@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Color de fondo celeste claro */
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e90ff; /* Azul brillante */
+        }
+        .header img {
+            height: 100px; /* Tamaño del logo */
+        }
+        .navbar {
+            background-color: #87cefa; /* Celeste */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .navbar a {
+            display: block;
+            color: #000;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #00bfff; /* Celeste más intenso al pasar el ratón */
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* Fondo blanco para las secciones */
+            margin-bottom: 20px;
+        }
+        .section.active {
+            display: block;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #1e90ff; /* Azul brillante */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #4682b4; /* Azul más oscuro al pasar el ratón */
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+        .return-to-menu {
+            margin-bottom: 20px;
+            background-color: #87cefa; /* Celeste */
+            border: none;
+            border-radius: 5px;
+            color: #000;
+        }
+        .return-to-menu:hover {
+            background-color: #00bfff; /* Celeste más intenso al pasar el ratón */
+        }
+        .section img {
+            width: 70%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="logo.jpg" alt="Logo"> <!-- Asegúrate de reemplazar "logo.png" con la ruta correcta a tu imagen de logo -->
+    </div>
+
+    <div class="navbar">
+        <a href="#" onclick="showSection('section1')">¿Qué es la IA?</a>
+        <a href="#" onclick="showSection('section2')">Ventajas y Desventajas</a>
+        <a href="#" onclick="showSection('section3')">Tipos de IA</a>
+        <a href="#" onclick="showSection('section4')">Ejemplo Aplicativo</a>
+        <a href="#" onclick="showSection('section5')">¿Cuándo Usar?</a>
+        <a href="#" onclick="showSection('section6')">Video</a>
+    </div>
+
+    <div class="container">
+        <h1 style="color: #1e90ff;">Inteligencia Artificial</h1>
+
+        <button onclick="showSection('section1')">¿Qué es la IA?</button>
+        <button onclick="showSection('section2')">Ventajas y Desventajas</button>
+        <button onclick="showSection('section3')">Tipos de IA</button>
+        <button onclick="showSection('section4')">Ejemplo Aplicativo</button>
+        <button onclick="showSection('section5')">¿Cuándo Usar?</button>
+        <button onclick="showSection('section6')">Video</button>
+
+        <div id="section1" class="section">
+            <button class="return-to-menu" onclick="showSection('')">Volver al Menú Principal</button>
+            <h2>¿Qué es la IA?</h2>
+            <img src="IA.jpg" alt="IA"> <!-- Reemplaza con la ruta correcta -->
+            <p>La Inteligencia Artificial (IA) es el campo de la informática que se enfoca en la creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la percepción y la toma de decisiones.</p>
+        </div>
+
+        <div id="section2" class="section">
+            <button class="return-to-menu" onclick="showSection('')">Volver al Menú Principal</button>
+            <h2>Ventajas y Desventajas</h2>
+            
+            <h3>Ventajas</h3>
+              <img src="VENTAJAS.jpg" alt="Imagen de Ventajas">
+            <ul>
+                <li>Automatización de tareas repetitivas.</li>
+                <li>Capacidad para procesar grandes cantidades de datos rápidamente.</li>
+                <li>Mejora de la eficiencia y precisión en diversas aplicaciones.</li>
+            </ul>
+            <h3>Desventajas</h3>
+              <img src="DESVENTAJAS.png" alt="Imagen de Ventajas">
+            <ul>
+                <li>Costos elevados en desarrollo e implementación.</li>
+                <li>Riesgos de privacidad y seguridad de datos.</li>
+                <li>Impacto en el empleo debido a la automatización.</li>
+            </ul>
+        </div>
+
+        <div id="section3" class="section">
+            <button class="return-to-menu" onclick="showSection('')">Volver al Menú Principal</button>
+            <h2>Tipos de IA</h2>
+            <img src="Tipos de IA.png" alt="Tipos de IA"> <!-- Reemplaza con la ruta correcta -->
+            <ul>
+                <li>IA Débil: Diseñada para realizar tareas específicas (por ejemplo, asistentes virtuales).</li>
+                <li>IA Fuerte: Tiene capacidades cognitivas similares a las humanas (actualmente en desarrollo).</li>
+                <li>IA General: Capaz de entender, aprender y aplicar conocimientos en una amplia variedad de tareas.</li>
+            </ul>
+        </div>
+
+        <div id="section4" class="section">
+            <button class="return-to-menu" onclick="showSection('')">Volver al Menú Principal</button>
+            <h2>Ejemplo Aplicativo de la IA</h2>
+            <img src="Netflix.jpg" alt="Ejemplo Aplicativo"> <!-- Reemplaza con la ruta correcta -->
+            <p>Un ejemplo aplicativo de IA es el uso de algoritmos de aprendizaje automático para personalizar recomendaciones en plataformas de streaming, como Netflix o Spotify, basadas en el historial de visualización o escucha del usuario.</p>
+        </div>
+
+        <div id="section5" class="section">
+            <button class="return-to-menu" onclick="showSection('')">Volver al Menú Principal</button>
+            <h2>¿Cuándo Usar y Cuándo No Usar la IA?</h2>
+            
+            <h3>¿Cuándo Usar?</h3>
+            <img src="HOGAR.jpg" alt="Imagen sobre cuándo usar IA">
+            <ul>
+                <li>Cuando se requiere procesar grandes volúmenes de datos.</li>
+                <li>Para automatizar tareas repetitivas y tediosas.</li>
+                <li>Para mejorar la precisión en áreas como el diagnóstico médico.</li>
+            </ul>
+            <h3>¿Cuándo No Usar?</h3>
+            <img src="TRANSTORNOS.jpg" alt="Imagen sobre cuándo no usar IA">
+            <ul>
+                <li>Cuando las tareas requieren empatía y juicio humano.</li>
+                <li>En situaciones donde la privacidad y seguridad de los datos sean una preocupación crítica.</li>
+                <li>Cuando los costos de implementación superan los beneficios.</li>
+            </ul>
+        </div>
+
+            <div id="section6" class="section">
+            <button class="return-to-menu" onclick="showSection('')">Volver al Menú Principal</button>
+            <h2>Video de la IA</h2>
+            <p>Visita el siguiente enlace para ver el video sobre Inteligencia Artificial:</p>
+            <a href="https://www.youtube.com/watch?v=NSf3o-wxtQ0" target="_blank">Ver Video</a> <!-- Reemplaza VIDEO_ID con el ID del video de YouTube -->
+        </div>
+
+    <script>
+        function showSection(sectionId) {
+            if (sectionId === '') {
+                // Muestra la página principal (todos los botones visibles, ninguna sección activa)
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => section.classList.remove('active'));
+            } else {
+                // Oculta todas las secciones
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Muestra la sección seleccionada
+                const section = document.getElementById(sectionId);
+                section.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
